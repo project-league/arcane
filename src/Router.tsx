@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { FirstPage } from './pages/First';
+import { Final } from './pages/Final';
 
 const router = createBrowserRouter([
   {
     path: '/arcane',
-    element: <FirstPage />,
+    element: <Final />,
   },
 ]);
 

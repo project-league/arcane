@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Container, Stack, TextInput, Title } from '@mantine/core';
 import zamkniete from '../assets/zamkniete.png';
 
-export function FirstPage() {
+interface FirstPageProps {
+  onPasswordSubmit: (password: string) => void;
+}
+
+export function FirstPage({ onPasswordSubmit }: FirstPageProps) {
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = () => {
+    onPasswordSubmit(password);
+  };
+
   return (
     <Container
       size="xs"
@@ -19,7 +29,7 @@ export function FirstPage() {
     >
       <Box
         style={{
-          backgroundColor: 'rgba(28, 26, 23, 0.82)',
+          backgroundColor: 'rgba(28, 26, 23, 0.72)',
           padding: '30px',
           borderRadius: '10px',
           width: '100%',
@@ -37,6 +47,8 @@ export function FirstPage() {
             label="Podaj kod dostępu"
             placeholder="Wprowadź kod"
             size="md"
+            value={password}
+            onChange={(event) => setPassword(event.currentTarget.value)}
             styles={{
               label: {
                 color: '#E8DFD3',
@@ -60,6 +72,7 @@ export function FirstPage() {
             fullWidth
             size="md"
             mt="md"
+            onClick={handleSubmit}
             styles={{
               root: {
                 backgroundColor: '#4A3F35',
