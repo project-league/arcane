@@ -4,11 +4,11 @@ import { Start } from './pages/Start';
 
 const router = createBrowserRouter([
   {
-    path: '/arcane',
+    path: '/arcane/',
     element: <Final />,
   },
   {
-    path: '/arcane/start',
+    path: '/arcane/start/',
     element: <Start />,
   },
 ]);
