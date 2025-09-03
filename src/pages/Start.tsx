@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Box, Button, Container, Stack, Text, TextInput, Title } from '@mantine/core';
 import logo from '../assets/logo.png';
 import tlo from '../assets/tlo.png';
-import wstep from '../assets/wstęp1.png';
-import wstep2 from '../assets/wstęp3.png';
+import wstep from '../assets/wstep1.png';
+import wstep2 from '../assets/wstep3.png';
 
 export function Start() {
   return (
