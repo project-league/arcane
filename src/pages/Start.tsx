@@ -11,7 +11,7 @@ export function Start() {
       <Container
         size="xs"
         style={{
-          minHeight: '80vh',
+          height: 'fit-content',
           backgroundImage: `url(${tlo})`,
           backgroundSize: 'cover',
           backgroundPosition: 'top',
